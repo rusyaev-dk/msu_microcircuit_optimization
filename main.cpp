@@ -9,8 +9,6 @@ int main() {
             myStack.push(i);
         }
         for (int i = 0; i < 10; i++) {
-            int peekA = myStack.peek();
-            std::cout << peekA;
             std::cout << myStack.pop();
         }
     } catch (const StackException& e) {
