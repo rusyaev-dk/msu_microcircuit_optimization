@@ -1,0 +1,3 @@
+C:/Users/ASUS/Desktop/discrete optimization/microcircuit/build/CMakeFiles/microcircuit.dir
+C:/Users/ASUS/Desktop/discrete optimization/microcircuit/build/CMakeFiles/edit_cache.dir
+C:/Users/ASUS/Desktop/discrete optimization/microcircuit/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/ASUS/Desktop/discrete optimization/microcircuit/build",
+  "command": "C:\\MinGW\\bin\\c++.exe   -g -o CMakeFiles\\microcircuit.dir\\main.cpp.obj -c \"C:\\Users\\ASUS\\Desktop\\discrete optimization\\microcircuit\\main.cpp\"",
+  "file": "C:/Users/ASUS/Desktop/discrete optimization/microcircuit/main.cpp",
+  "output": "CMakeFiles/microcircuit.dir/main.cpp.obj"
+}
+]
