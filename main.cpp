@@ -4,7 +4,7 @@
 
 int main() {
     try {
-        StackTest<int> myStack;
+        Stack<int> myStack;
         for (int i = 0; i < 10; i++) {
             myStack.push(i);
         }
