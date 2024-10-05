@@ -9,3 +9,12 @@ class StackException {
 
     const char* what() const { return _msg.c_str(); }
 };
+
+class MicrocircuitException {
+    std::string _msg;
+
+   public:
+    MicrocircuitException(const std::string& msg) : _msg(msg) {}
+
+    const char* what() const { return _msg.c_str(); }
+};

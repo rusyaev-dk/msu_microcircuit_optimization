@@ -1,17 +1,16 @@
 #include <iostream>
 
+#include "microcircuit.hpp"
 #include "stack.hpp"
 
 int main() {
     try {
-        Stack<int> myStack;
-        for (int i = 0; i < 10; i++) {
-            myStack.push(i);
-        }
-        for (int i = 0; i < 10; i++) {
-            std::cout << myStack.pop();
-        }
-    } catch (const StackException& e) {
+        Microcircuit mic;
+        mic.writeX(5);
+        int res = mic.powN(6);
+        std::cout << res << "\n";
+
+    } catch (const MicrocircuitException& e) {
         std::cout << "Error: " << e.what() << std::endl;
     }
 
