@@ -11,7 +11,7 @@ Microcircuit::Microcircuit() {
 
 void Microcircuit::_write(int x) {
     _stack.push(x);
-
+    
     _total_cycles++;
 };
 
@@ -36,7 +36,7 @@ void Microcircuit::_pow_n(int n) {
     }
 }
 
-void Microcircuit::_brute_force_approach(int x, int n) {
+void Microcircuit::_brute_force(int x, int n) {
     _write(_stack.peek());
     for (int i = 1; i < n; ++i) {
         _mul();
@@ -70,7 +70,7 @@ std::vector<int> Microcircuit::_find_prime_factors(int k) {
     return prime_factors;
 }
 
-void Microcircuit::_prime_factors_approach(int x, int n) {
+void Microcircuit::_prime_factors_power(int x, int n) {
     std::vector<int> prime_factors = _find_prime_factors(n);
 
     for (int i = 0; i < prime_factors.size(); i++) {
@@ -82,7 +82,7 @@ void Microcircuit::_prime_factors_approach(int x, int n) {
     }
 }
 
-void Microcircuit::_binary_exponentiation_approach(int x, int n) {
+void Microcircuit::_binary_exponentiation(int x, int n) {
     std::vector<int> bin;
     while (n > 0) {
         bin.push_back(n % 2);
