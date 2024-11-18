@@ -5,60 +5,57 @@
 template <typename T>
 class Stack {
     T* _data;
-    int _stackDepth;
-    int _stackSize;
-
-    inline bool _isEmpty() const { return this->_stackSize == 0; };
+    int _max_size;
+    int _cur_size;
 
    public:
     Stack();
     Stack(const Stack<T>& other);
 
     void push(T elem);
-    void replaceTop(T elem);
+    void replace_top(T elem);
     T pop();
-    T getTop() const;
-    T getPreTop() const;
+    T peek() const;
+    T penultimate() const;  // Предпоследний сверху элемент
 
-    inline int size() const { return this->_stackSize; }
+    inline int size() const { return this->_cur_size; }
+    inline bool is_empty() const { return this->_cur_size == 0; };
 
     ~Stack();
 };
 
-static const int _DEFAULT_STACK_DEPTH = 100;
+static const int _DEFAULT_STACK_MAX_SIZE = 100000;
 
 template <typename T>
-Stack<T>::Stack() : _stackDepth(_DEFAULT_STACK_DEPTH), _stackSize(0) {
-    this->_data = new T[_stackDepth];
+Stack<T>::Stack() : _max_size(_DEFAULT_STACK_MAX_SIZE), _cur_size(0) {
+    _data = new T[_max_size];
 }
 
 template <typename T>
 Stack<T>::Stack(const Stack<T>& other)
-    : _stackDepth(other._stackDepth), _stackSize(other._stackSize) {
-    this->_data = new T[_stackDepth];
-    for (int i = 0; i < _stackSize; ++i) {
+    : _max_size(other._max_size), _cur_size(other._cur_size) {
+    _data = new T[_max_size];
+
+    for (int i = 0; i < _cur_size; ++i) {
         _data[i] = other._data[i];
     }
 }
 
 template <typename T>
 void Stack<T>::push(T elem) {
-    if (_stackSize >= _stackDepth) {
+    if (_cur_size >= _max_size) {
         throw MicrocircuitException(
-            "Stack overflow. Cannot push more elements.");
+            "Stack overflow. Unable to push more elements.");
     }
-    _data[_stackSize] = elem;
-    this->_stackSize++;
+
+    _data[_cur_size] = elem;
+    _cur_size++;
 }
 
 template <typename T>
-void Stack<T>::replaceTop(T elem) {
-    if (_stackSize >= _stackDepth) {
-        throw MicrocircuitException(
-            "Stack overflow. Cannot push more elements.");
-    }
-    if (this->_stackSize > 1) {
-        _data[_stackSize - 1] = elem;
+void Stack<T>::replace_top(T elem) {
+    if (_cur_size > 1) {
+        _data[_cur_size - 1] = elem;
     } else {
         _data[0] = elem;
     }
@@ -66,38 +63,41 @@ void Stack<T>::replaceTop(T elem) {
 
 template <typename T>
 T Stack<T>::pop() {
-    if (this->_isEmpty()) {
-        throw MicrocircuitException("Pop() operation aborted: stack is empty.");
+    if (this->is_empty()) {
+        throw MicrocircuitException("pop() operation aborted: stack is empty.");
     }
-    T elem = this->_data[this->_stackSize - 1];
-    this->_stackSize--;
+
+    T elem = _data[_cur_size - 1];
+    _cur_size--;
     return elem;
 }
 
 template <typename T>
-T Stack<T>::getTop() const {
-    if (this->_isEmpty()) {
+T Stack<T>::peek() const {
+    if (this->is_empty()) {
         throw MicrocircuitException(
-            "getTop() operation aborted: stack is empty.");
+            "peek() operation aborted: stack is empty.");
     }
-    return this->_data[this->_stackSize - 1];
+
+    return _data[_cur_size - 1];
 }
 
 template <typename T>
-T Stack<T>::getPreTop() const {
-    if (this->_isEmpty()) {
+T Stack<T>::penultimate() const {
+    if (this->is_empty()) {
         throw MicrocircuitException(
-            "getPreTop() operation aborted: stack is empty.");
-    } else if (this->_stackSize < 2) {
+            "penultimate() operation aborted: stack is empty.");
+    } else if (_cur_size < 2) {
         throw MicrocircuitException(
-            "getPreTop() operation aborted: stackSize is less than 2.");
+            "penultimate() operation aborted: stackSize is less than 2.");
     }
-    return this->_data[this->_stackSize - 2];
+
+    return _data[_cur_size - 2];
 }
 
 template <typename T>
 Stack<T>::~Stack() {
-    if (this->_data) {
+    if (_data) {
         delete[] _data;
     }
 }

@@ -112,27 +112,22 @@ CMakeFiles/microcircuit.dir/main.cpp.obj: C:/Users/ASUS/Desktop/Discrete\ optimi
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/istream \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/istream.tcc \
   C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/microcircuit.hpp \
-  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/stack.hpp \
-  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/exceptions.hpp \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/vector \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_construct.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_uninitialized.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_vector.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_bvector.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/vector.tcc
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/vector.tcc \
+  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/stack.hpp \
+  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/exceptions.hpp
 
 CMakeFiles/microcircuit.dir/microcircuit.cpp.obj: C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/microcircuit.cpp \
   C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/microcircuit.hpp \
-  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/stack.hpp \
-  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/exceptions.hpp \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/string \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/vector \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_algobase.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++config.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/os_defines.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/cpu_defines.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stringfwd.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/memoryfwd.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/char_traits.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_algobase.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/functexcept.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/exception_defines.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/cpp_type_traits.h \
@@ -149,6 +144,31 @@ CMakeFiles/microcircuit.dir/microcircuit.cpp.obj: C:/Users/ASUS/Desktop/Discrete
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/ptr_traits.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/debug/debug.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/predefined_ops.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/allocator.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++allocator.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ext/new_allocator.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/new \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/exception \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/exception_ptr.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/nested_exception.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/memoryfwd.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_construct.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ext/alloc_traits.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/alloc_traits.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_uninitialized.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_vector.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/initializer_list \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_bvector.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/functional_hash.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/hash_bytes.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/range_access.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/vector.tcc \
+  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/stack.hpp \
+  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/exceptions.hpp \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/string \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stringfwd.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/char_traits.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/postypes.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cwchar \
   C:/MinGW/include/wchar.h \
@@ -173,14 +193,6 @@ CMakeFiles/microcircuit.dir/microcircuit.cpp.obj: C:/Users/ASUS/Desktop/Discrete
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cstdint \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/stdint.h \
   C:/MinGW/include/stdint.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/allocator.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++allocator.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ext/new_allocator.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/new \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/exception \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/atomic_lockfree_defines.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/exception_ptr.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/nested_exception.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/localefwd.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++locale.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/clocale \
@@ -193,31 +205,19 @@ CMakeFiles/microcircuit.dir/microcircuit.cpp.obj: C:/Users/ASUS/Desktop/Discrete
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/cxxabi_forced.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_function.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/backward/binders.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/range_access.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/initializer_list \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ext/atomicity.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/gthr.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/gthr-default.h \
   C:/MinGW/include/errno.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/atomic_word.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ext/alloc_traits.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/alloc_traits.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ext/string_conversions.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cstdlib \
   C:/MinGW/include/stdlib.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cstdio \
   C:/MinGW/include/stdio.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cerrno \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/functional_hash.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/hash_bytes.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.tcc \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/vector \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_construct.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_uninitialized.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_vector.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_bvector.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/vector.tcc \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/iostream \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ostream \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ios \
@@ -465,13 +465,13 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/istream.tcc:
 
 C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/microcircuit.hpp:
 
-C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/exceptions.hpp:
-
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/vector:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_vector.h:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_bvector.h:
+
+C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/exceptions.hpp:
 
 C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/microcircuit.cpp:
 

@@ -4,59 +4,107 @@
 
 #include "math.h"
 
-Microcircuit::Microcircuit() { this->_stack = Stack<int>(); }
-
-void Microcircuit::writeX(int x) { this->_stack.push(x); };
-
-int Microcircuit::mul() {
-    int top = this->_stack.getTop();
-    int preTop = this->_stack.getPreTop();
-    this->_stack.replaceTop(top * preTop);
+Microcircuit::Microcircuit() {
+    _stack = Stack<int>();
+    _total_cycles = 0;
 }
 
-int Microcircuit::powN(int n) {
-    std::vector<int> primeFactors = this->_primeFactors(n);
+void Microcircuit::_write(int x) {
+    _stack.push(x);
 
-    for (int i = 0; i < primeFactors.size(); i++) {
-        std::cout << primeFactors[i] << " ";
+    _total_cycles++;
+};
+
+void Microcircuit::_mul() {
+    int top = _stack.peek();
+    int preTop = _stack.penultimate();
+    _stack.replace_top(top * preTop);
+
+    _total_cycles++;
+}
+
+void Microcircuit::_pow_n(int n) {
+    if (_stack.is_empty()) return;
+
+    int base = _stack.peek();
+    _stack.pop();
+    _stack.push(base);
+
+    for (int i = 1; i < n; i++) {
+        _stack.push(base);
+        _mul();
+    }
+}
+
+void Microcircuit::_brute_force_approach(int x, int n) {
+    _write(_stack.peek());
+    for (int i = 1; i < n; ++i) {
+        _mul();
+    }
+}
+
+std::vector<int> Microcircuit::_find_prime_factors(int k) {
+    std::vector<int> prime_factors;
+
+    if (k <= 1) {
+        prime_factors[0] = k;
+        return prime_factors;
     }
 
-    std::cout << std::endl;
+    while (k % 2 == 0) {
+        prime_factors.push_back(2);
+        k /= 2;
+    }
 
-    for (int i = 0; i < primeFactors.size(); i++) {
-        int top = this->_stack.getTop();
-        this->_stack.push(top);
-        for (int j = 0; j < primeFactors[i] - 1; j++) {
-            this->mul();
+    for (int i = 3; i <= sqrt(k); i += 2) {
+        while (k % i == 0) {
+            prime_factors.push_back(i);
+            k /= i;
         }
     }
 
-    return this->_stack.getTop();
-}
-
-std::vector<int> Microcircuit::_primeFactors(int n) {
-    std::vector<int> factorsArr;
-
-    if (n <= 1) {
-        factorsArr[0] = n;
-        return factorsArr;
+    if (k > 2) {
+        prime_factors.push_back(k);
     }
 
-    while (n % 2 == 0) {
-        factorsArr.push_back(2);
+    return prime_factors;
+}
+
+void Microcircuit::_prime_factors_approach(int x, int n) {
+    std::vector<int> prime_factors = _find_prime_factors(n);
+
+    for (int i = 0; i < prime_factors.size(); i++) {
+        int top = _stack.peek();
+        _stack.push(top);
+        for (int j = 0; j < prime_factors[i] - 1; j++) {
+            _mul();
+        }
+    }
+}
+
+void Microcircuit::_binary_exponentiation_approach(int x, int n) {
+    std::vector<int> bin;
+    while (n > 0) {
+        bin.push_back(n % 2);
         n /= 2;
     }
 
-    for (int i = 3; i <= sqrt(n); i += 2) {
-        while (n % i == 0) {
-            factorsArr.push_back(i);
-            n /= i;
+    for (int i = bin.size() - 2; i >= 0; --i) {
+        _pow_n(2);
+        if (bin[i] == 1) {
+            _write(x);
+            _mul();
         }
     }
+}
 
-    if (n > 2) {
-        factorsArr.push_back(n);
-    }
+int Microcircuit::compute_power(int x, int n) {
+    _write(x);
+    // _brute_force_approach(x, n);
+    // _prime_factors_approach(x, n);
+    // _binary_exponentiation_approach(x, n);
 
-    return factorsArr;
+    std::cout << "Total cycles: " << _total_cycles << std::endl;
+    _total_cycles = 0;
+    return _stack.peek();
 }

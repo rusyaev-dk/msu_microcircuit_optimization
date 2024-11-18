@@ -6,8 +6,7 @@
 int main() {
     try {
         Microcircuit mic;
-        mic.writeX(5);
-        int res = mic.powN(6);
+        int res = mic.compute_power(2, 26);
         std::cout << res << "\n";
 
     } catch (const MicrocircuitException& e) {
@@ -16,3 +15,6 @@ int main() {
 
     return 0;
 }
+
+// 2^26 = 67108864
+// 5^7 = 78125
