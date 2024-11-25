@@ -13,7 +13,7 @@ class Stack {
     Stack(const Stack<T>& other);
 
     void push(T elem);
-    void replace_top(T elem);
+    void rewrite_top(T elem);
     T pop();
     T peek() const;
     T penultimate() const;  // Предпоследний сверху элемент
@@ -24,7 +24,7 @@ class Stack {
     ~Stack();
 };
 
-static const int _DEFAULT_STACK_MAX_SIZE = 100000;
+static const int _DEFAULT_STACK_MAX_SIZE = 1000;
 
 template <typename T>
 Stack<T>::Stack() : _max_size(_DEFAULT_STACK_MAX_SIZE), _cur_size(0) {
@@ -53,7 +53,7 @@ void Stack<T>::push(T elem) {
 }
 
 template <typename T>
-void Stack<T>::replace_top(T elem) {
+void Stack<T>::rewrite_top(T elem) {
     if (_cur_size > 1) {
         _data[_cur_size - 1] = elem;
     } else {

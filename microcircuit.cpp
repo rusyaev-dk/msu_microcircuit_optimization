@@ -1,50 +1,86 @@
 #include "microcircuit.hpp"
 
-#include <iostream>
-
 #include "math.h"
 
-Microcircuit::Microcircuit() {
-    _stack = Stack<int>();
+Microcircuit::Microcircuit(std::ostream& stream)
+    : _logger(InstructionLogger(stream)) {
+    _stack = Stack<long long int>();
+
     _total_cycles = 0;
 }
 
-void Microcircuit::_write(int x) {
+long long int Microcircuit::compute_power(long long int x, long long int n) {
+    if (n == 1) return x;
+
+    _logger.log(MCInstruction::Write, x);
+    _write(x);
+
+    // _binary_exponentiation(x, n);
+    _brute_force(x, n);
+
+    _logger.log("Total cycles:", _total_cycles);
+    _total_cycles = 0;
+    return _stack.peek();
+}
+
+void Microcircuit::_brute_force(long long int x, long long int n) {
+    _write(_stack.peek());
+    for (long long int i = 1; i < n; i++) {
+        _logger.log(MCInstruction::Mul);
+        _mul();
+    }
+}
+
+void Microcircuit::_binary_exponentiation(long long int x, long long int n) {
+    std::vector<long long int> bin;
+    while (n > 0) {
+        bin.push_back(n % 2);
+        n /= 2;
+    }
+
+    for (long long int i = bin.size() - 2; i >= 0; --i) {
+        _logger.log(MCInstruction::Pow, 2);
+        _pow_n(2);
+        if (bin[i] == 1) {
+            _logger.log(MCInstruction::Write, x);
+            _write(x);
+
+            _logger.log(MCInstruction::Mul);
+            _mul();
+        }
+    }
+}
+
+void Microcircuit::_write(long long int x) {
     _stack.push(x);
-    
+
     _total_cycles++;
 };
 
 void Microcircuit::_mul() {
-    int top = _stack.peek();
-    int preTop = _stack.penultimate();
-    _stack.replace_top(top * preTop);
+    long long int top = _stack.peek();
+    long long int preTop = _stack.penultimate();
+    _stack.rewrite_top(top * preTop);
 
     _total_cycles++;
 }
 
-void Microcircuit::_pow_n(int n) {
+void Microcircuit::_pow_n(long long int n) {
     if (_stack.is_empty()) return;
 
-    int base = _stack.peek();
+    // переделать под _write и так далее...
+    long long int base = _stack.peek();
     _stack.pop();
     _stack.push(base);
 
-    for (int i = 1; i < n; i++) {
-        _stack.push(base);
+    for (long long int i = 1; i < n; i++) {
+        _stack.push(base);  // write
         _mul();
     }
 }
 
-void Microcircuit::_brute_force(int x, int n) {
-    _write(_stack.peek());
-    for (int i = 1; i < n; ++i) {
-        _mul();
-    }
-}
-
-std::vector<int> Microcircuit::_find_prime_factors(int k) {
-    std::vector<int> prime_factors;
+std::vector<long long int> Microcircuit::_find_prime_factors(long long int k) {
+    std::vector<long long int> prime_factors;
 
     if (k <= 1) {
         prime_factors[0] = k;
@@ -70,8 +106,8 @@ std::vector<int> Microcircuit::_find_prime_factors(int k) {
     return prime_factors;
 }
 
-void Microcircuit::_prime_factors_power(int x, int n) {
-    std::vector<int> prime_factors = _find_prime_factors(n);
+void Microcircuit::_prime_factors_power(long long int x, long long int n) {
+    std::vector<long long int> prime_factors = _find_prime_factors(n);
 
     for (int i = 0; i < prime_factors.size(); i++) {
         int top = _stack.peek();
@@ -80,31 +116,4 @@ void Microcircuit::_prime_factors_power(int x, int n) {
             _mul();
         }
     }
-}
-
-void Microcircuit::_binary_exponentiation(int x, int n) {
-    std::vector<int> bin;
-    while (n > 0) {
-        bin.push_back(n % 2);
-        n /= 2;
-    }
-
-    for (int i = bin.size() - 2; i >= 0; --i) {
-        _pow_n(2);
-        if (bin[i] == 1) {
-            _write(x);
-            _mul();
-        }
-    }
-}
-
-int Microcircuit::compute_power(int x, int n) {
-    _write(x);
-    // _brute_force_approach(x, n);
-    // _prime_factors_approach(x, n);
-    // _binary_exponentiation_approach(x, n);
-
-    std::cout << "Total cycles: " << _total_cycles << std::endl;
-    _total_cycles = 0;
-    return _stack.peek();
 }
