@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/ASUS/Desktop/Discrete optimization/microcircuit/main.cpp" "CMakeFiles/microcircuit.dir/main.cpp.obj" "gcc" "CMakeFiles/microcircuit.dir/main.cpp.obj.d"
+  "C:/Users/ASUS/Desktop/Discrete optimization/microcircuit/mic_tester.cpp" "CMakeFiles/microcircuit.dir/mic_tester.cpp.obj" "gcc" "CMakeFiles/microcircuit.dir/mic_tester.cpp.obj.d"
   "C:/Users/ASUS/Desktop/Discrete optimization/microcircuit/microcircuit.cpp" "CMakeFiles/microcircuit.dir/microcircuit.cpp.obj" "gcc" "CMakeFiles/microcircuit.dir/microcircuit.cpp.obj.d"
   )
 

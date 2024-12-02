@@ -46,7 +46,7 @@ class InstructionLogger {
         (*_output_stream) << msg << " " << arg << std::endl;
     }
 
-    void log(MCInstruction instruction, long long arg) const {
+    void log(MCInstruction instruction, const long long arg) const {
         if (!_output_stream) return;
 
         (*_output_stream) << InstructionFormatter::to_string(instruction) << " "

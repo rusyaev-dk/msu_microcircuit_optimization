@@ -21,6 +21,8 @@ class Stack {
     inline int size() const { return this->_cur_size; }
     inline bool is_empty() const { return this->_cur_size == 0; };
 
+    void clear();
+
     ~Stack();
 };
 
@@ -93,6 +95,11 @@ T Stack<T>::penultimate() const {
     }
 
     return _data[_cur_size - 2];
+}
+
+template <typename T>
+void Stack<T>::clear() {
+    _cur_size = 0;
 }
 
 template <typename T>

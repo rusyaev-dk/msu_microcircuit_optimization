@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mic_tester.obj: mic_tester.cpp.obj
+.PHONY : mic_tester.obj
+
+# target to build an object file
+mic_tester.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/mic_tester.cpp.obj
+.PHONY : mic_tester.cpp.obj
+
+mic_tester.i: mic_tester.cpp.i
+.PHONY : mic_tester.i
+
+# target to preprocess a source file
+mic_tester.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/mic_tester.cpp.i
+.PHONY : mic_tester.cpp.i
+
+mic_tester.s: mic_tester.cpp.s
+.PHONY : mic_tester.s
+
+# target to generate assembly for a file
+mic_tester.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/mic_tester.cpp.s
+.PHONY : mic_tester.cpp.s
+
 microcircuit.obj: microcircuit.cpp.obj
 .PHONY : microcircuit.obj
 
@@ -188,6 +212,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... mic_tester.obj
+	@echo ... mic_tester.i
+	@echo ... mic_tester.s
 	@echo ... microcircuit.obj
 	@echo ... microcircuit.i
 	@echo ... microcircuit.s
