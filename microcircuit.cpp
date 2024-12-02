@@ -10,13 +10,23 @@ Microcircuit::Microcircuit(std::ostream& stream)
 }
 
 long long Microcircuit::compute_power(long long x, long long n) {
-    if (x == 0 || n == 1) return x;
-    if (x == 1 || n == 0) return 1ll;
-
     _logger.log("x =", x);
     _logger.log("n =", n);
+
     _logger.log(MCInstruction::Write, x);
     _write(x);
+
+    if (x == 0 || n == 1) {
+        _logger.log("Answer:", x);
+        _logger.log("Total cycles:", 1);
+        _logger.log("\n");
+        return x;
+    } else if (x == 1 || n == 0) {
+        _logger.log("Answer:", 1LL);
+        _logger.log("Total cycles:", 1);
+        _logger.log("\n");
+        return 1ll;
+    }
 
     _binary_exponentiation(x, n);
     // _brute_force(x, n);
@@ -24,7 +34,9 @@ long long Microcircuit::compute_power(long long x, long long n) {
     _logger.log("Answer:", _stack.peek());
     _logger.log("Total cycles:", _total_cycles);
     _logger.log("\n");
+
     _total_cycles = 0;
+
     return _stack.peek();
 }
 
@@ -55,61 +67,36 @@ void Microcircuit::_binary_exponentiation(long long x, long long n) {
             _mul();
         }
     }
-
-    // 5 = 1 0 1
-    // long long int result = 1;  // Начальный результат (2^0)
-
-    // while (n > 0) {
-    //     // Если текущий бит равен 1, умножаем на x
-    //     if (n & 1) {  // Проверяем последний бит (n & 1 дает 1, если
-    //     последний бит равен 1)
-    //         _logger.log(MCInstruction::Write, result);
-    //         _write(result);
-    //         _logger.log(MCInstruction::Mul);
-    //         _mul();  // Умножаем результат на x
-    //     }
-
-    //     // Возводим в квадрат текущий результат
-    //     if (n == 1) {  // Завершаем цикл, если n стало равно 1 (последний бит
-    //     был обработан)
-    //         break;
-    //     }
-
-    //     _logger.log(MCInstruction::Pow, 2);
-    //     _pow_n(2);  // Возводим в квадрат (возводим в степень 2)
-
-    //     // Сдвигаем число n на 1 вправо
-    //     n >>= 1;
-    // }
-    // _write(x);
-    // _mul();
 }
 
 void Microcircuit::_write(long long x) {
+    // 1 cycle
     _stack.push(x);
 
     _total_cycles++;
 };
 
 void Microcircuit::_mul() {
+    // 1 cycle
     long long top = _stack.peek();
-    long long preTop = _stack.penultimate();
-    _stack.rewrite_top(top * preTop);
+    long long penultimate = _stack.penultimate();
+    _stack.rewrite_top(top * penultimate);
 
     _total_cycles++;
 }
 
 void Microcircuit::_pow_n(long long n) {
+    // n - 1 cycles
     if (_stack.is_empty()) return;
 
-    long long base = _stack.peek();
-    _stack.pop();
-    _write(base);
-
-    for (long long i = 1; i < n; i++) {
-        _write(base);
-        _mul();
+    long long top = _stack.peek();
+    long long result = 1;
+    for (long long i = 0; i < n; ++i) {
+        result *= top;
     }
+    _stack.rewrite_top(result);
+
+    _total_cycles += n - 1;
 }
 
 void Microcircuit::clear() {

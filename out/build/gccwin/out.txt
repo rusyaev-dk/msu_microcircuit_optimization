@@ -6,7 +6,7 @@ Pow 2
 Write 2
 Mul
 Answer: 32
-Total cycles: 9
+Total cycles: 5
 
 
 x = 2
@@ -17,7 +17,7 @@ Write 2
 Mul
 Pow 2
 Answer: 64
-Total cycles: 9
+Total cycles: 5
 
 
 x = 2
@@ -32,7 +32,7 @@ Write 2
 Mul
 Pow 2
 Answer: 67108864
-Total cycles: 17
+Total cycles: 9
 
 
 x = 5
@@ -45,7 +45,7 @@ Pow 2
 Write 5
 Mul
 Answer: 78125
-Total cycles: 11
+Total cycles: 7
 
 
 x = 25
@@ -53,7 +53,49 @@ n = 2
 Write 25
 Pow 2
 Answer: 625
-Total cycles: 4
+Total cycles: 2
+
+
+x = 1
+n = 567
+Write 1
+Answer: 1
+Total cycles: 1
+
+
+x = 0
+n = 567
+Write 0
+Answer: 0
+Total cycles: 1
+
+
+x = 345437637
+n = 0
+Write 345437637
+Answer: 1
+Total cycles: 1
+
+
+x = 10
+n = 0
+Write 10
+Answer: 1
+Total cycles: 1
+
+
+x = 10
+n = 1
+Write 10
+Answer: 10
+Total cycles: 1
+
+
+x = 0
+n = 0
+Write 0
+Answer: 0
+Total cycles: 1
 
 
 x = 2
@@ -72,7 +114,7 @@ Pow 2
 Write 2
 Mul
 Answer: -2147483648
-Total cycles: 21
+Total cycles: 13
 
 
 x = 2
@@ -84,7 +126,7 @@ Write 2
 Mul
 Pow 2
 Answer: 1024
-Total cycles: 12
+Total cycles: 6
 
 
 x = 3
@@ -94,7 +136,7 @@ Pow 2
 Write 3
 Mul
 Answer: 27
-Total cycles: 6
+Total cycles: 4
 
 
 x = 9
@@ -106,7 +148,7 @@ Pow 2
 Write 9
 Mul
 Answer: 387420489
-Total cycles: 12
+Total cycles: 6
 
 
 x = 8
@@ -118,7 +160,7 @@ Mul
 Pow 2
 Pow 2
 Answer: 0
-Total cycles: 12
+Total cycles: 6
 
 
 x = 7
@@ -127,7 +169,7 @@ Write 7
 Pow 2
 Pow 2
 Answer: 2401
-Total cycles: 7
+Total cycles: 3
 
 
 x = 15
@@ -137,7 +179,7 @@ Pow 2
 Write 15
 Mul
 Answer: 3375
-Total cycles: 6
+Total cycles: 4
 
 
 x = 20
@@ -148,7 +190,7 @@ Pow 2
 Write 20
 Mul
 Answer: 3200000
-Total cycles: 9
+Total cycles: 5
 
 
 x = 11
@@ -162,6 +204,6 @@ Pow 2
 Write 11
 Mul
 Answer: 1843829075
-Total cycles: 14
+Total cycles: 8
 
 

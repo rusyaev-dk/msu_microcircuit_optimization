@@ -27,10 +27,10 @@ void MicTester::_load_tests() {
 void MicTester::run_tests() {
     for (int i = 0; i < _tests.size(); i++) {
         MicTest test = _tests[i];
+
         long long res = _mic.compute_power(test.n, test.x);
 
         _mic.clear();
-
         if (res != test.ans) {
             std::cout << "- Test " << i + 1 << " failed\n";
             continue;
