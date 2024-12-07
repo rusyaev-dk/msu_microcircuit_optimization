@@ -41,6 +41,7 @@ long long Microcircuit::compute_power(long long x, long long n) {
 }
 
 void Microcircuit::_brute_force(long long x, long long n) {
+    _logger.log(MCInstruction::Write, _stack.peek());
     _write(_stack.peek());
     for (long long i = 1; i < n; i++) {
         _logger.log(MCInstruction::Mul);

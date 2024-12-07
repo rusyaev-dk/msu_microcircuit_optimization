@@ -40,7 +40,7 @@ class InstructionLogger {
         (*_output_stream) << msg << std::endl;
     }
 
-    void log(const std::string& msg, const int arg) const {
+    void log(const std::string& msg, const long long arg) const {
         if (!_output_stream) return;
 
         (*_output_stream) << msg << " " << arg << std::endl;

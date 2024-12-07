@@ -113,7 +113,7 @@ Mul
 Pow 2
 Write 2
 Mul
-Answer: -2147483648
+Answer: 2147483648
 Total cycles: 13
 
 
@@ -159,7 +159,7 @@ Write 8
 Mul
 Pow 2
 Pow 2
-Answer: 0
+Answer: 68719476736
 Total cycles: 6
 
 
@@ -203,7 +203,250 @@ Mul
 Pow 2
 Write 11
 Mul
-Answer: 1843829075
+Answer: 285311670611
 Total cycles: 8
+
+
+x = 1
+n = 999999
+Write 1
+Answer: 1
+Total cycles: 1
+
+
+x = 2
+n = 50
+Write 2
+Pow 2
+Write 2
+Mul
+Pow 2
+Pow 2
+Pow 2
+Write 2
+Mul
+Pow 2
+Answer: 1125899906842624
+Total cycles: 10
+
+
+x = 3
+n = 20
+Write 3
+Pow 2
+Pow 2
+Write 3
+Mul
+Pow 2
+Pow 2
+Answer: 3486784401
+Total cycles: 7
+
+
+x = 4
+n = 15
+Write 4
+Pow 2
+Write 4
+Mul
+Pow 2
+Write 4
+Mul
+Pow 2
+Write 4
+Mul
+Answer: 1073741824
+Total cycles: 10
+
+
+x = 5
+n = 13
+Write 5
+Pow 2
+Write 5
+Mul
+Pow 2
+Pow 2
+Write 5
+Mul
+Answer: 1220703125
+Total cycles: 8
+
+
+x = 6
+n = 15
+Write 6
+Pow 2
+Write 6
+Mul
+Pow 2
+Write 6
+Mul
+Pow 2
+Write 6
+Mul
+Answer: 470184984576
+Total cycles: 10
+
+
+x = 7
+n = 10
+Write 7
+Pow 2
+Pow 2
+Write 7
+Mul
+Pow 2
+Answer: 282475249
+Total cycles: 6
+
+
+x = 8
+n = 5
+Write 8
+Pow 2
+Pow 2
+Write 8
+Mul
+Answer: 32768
+Total cycles: 5
+
+
+x = 9
+n = 8
+Write 9
+Pow 2
+Pow 2
+Pow 2
+Answer: 43046721
+Total cycles: 4
+
+
+x = 10
+n = 10
+Write 10
+Pow 2
+Pow 2
+Write 10
+Mul
+Pow 2
+Answer: 10000000000
+Total cycles: 6
+
+
+x = 11
+n = 9
+Write 11
+Pow 2
+Pow 2
+Pow 2
+Write 11
+Mul
+Answer: 2357947691
+Total cycles: 6
+
+
+x = 2
+n = 32
+Write 2
+Pow 2
+Pow 2
+Pow 2
+Pow 2
+Pow 2
+Answer: 4294967296
+Total cycles: 6
+
+
+x = 3
+n = 19
+Write 3
+Pow 2
+Pow 2
+Pow 2
+Write 3
+Mul
+Pow 2
+Write 3
+Mul
+Answer: 1162261467
+Total cycles: 9
+
+
+x = 12
+n = 8
+Write 12
+Pow 2
+Pow 2
+Pow 2
+Answer: 429981696
+Total cycles: 4
+
+
+x = 15
+n = 8
+Write 15
+Pow 2
+Pow 2
+Pow 2
+Answer: 2562890625
+Total cycles: 4
+
+
+x = 13
+n = 7
+Write 13
+Pow 2
+Write 13
+Mul
+Pow 2
+Write 13
+Mul
+Answer: 62748517
+Total cycles: 7
+
+
+x = 19
+n = 7
+Write 19
+Pow 2
+Write 19
+Mul
+Pow 2
+Write 19
+Mul
+Answer: 893871739
+Total cycles: 7
+
+
+x = 17
+n = 6
+Write 17
+Pow 2
+Write 17
+Mul
+Pow 2
+Answer: 24137569
+Total cycles: 5
+
+
+x = 23
+n = 5
+Write 23
+Pow 2
+Pow 2
+Write 23
+Mul
+Answer: 6436343
+Total cycles: 5
+
+
+x = 25
+n = 4
+Write 25
+Pow 2
+Pow 2
+Answer: 390625
+Total cycles: 3
 
 

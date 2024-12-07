@@ -32,7 +32,7 @@ void MicTester::run_tests() {
 
         _mic.clear();
         if (res != test.ans) {
-            std::cout << "- Test " << i + 1 << " failed\n";
+            std::cout << "- Test " << i + 1 << " failed. Correct ans: " << test.ans << " Output ans: " << res << "\n";
             continue;
         }
         std::cout << "- Test " << i + 1 << " passed\n";
