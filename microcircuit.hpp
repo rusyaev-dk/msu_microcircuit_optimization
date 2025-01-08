@@ -28,5 +28,5 @@ class Microcircuit {
 
     void clear();
 
-    ~Microcircuit();
+    inline int get_cycles() const { return _total_cycles; };
 };

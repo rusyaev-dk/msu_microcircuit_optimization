@@ -121,8 +121,3 @@ void Microcircuit::clear() {
     _stack.clear();
     _total_cycles = 0;
 }
-
-Microcircuit::~Microcircuit() {
-    delete[] &_stack;
-    delete[] &_logger;
-}

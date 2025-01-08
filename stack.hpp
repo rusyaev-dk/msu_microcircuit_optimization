@@ -26,7 +26,7 @@ class Stack {
     ~Stack();
 };
 
-static const int _DEFAULT_STACK_MAX_SIZE = 1000;
+static const int _DEFAULT_STACK_MAX_SIZE = 10000;
 
 template <typename T>
 Stack<T>::Stack() : _max_size(_DEFAULT_STACK_MAX_SIZE), _cur_size(0) {

@@ -14,7 +14,7 @@ struct MicTest {
 };
 
 class MicTester {
-    static const int _RAND_TESTS_COUNT = 40;
+    static const int _RAND_TESTS_COUNT = 100;
 
     Microcircuit _mic;
     std::fstream _static_tests_fstream;
@@ -22,6 +22,8 @@ class MicTester {
 
     std::vector<MicTest> _static_tests;
     std::vector<MicTest> _random_tests;
+
+    std::vector<std::vector<int>> _metrics;
 
     void _load_tests(std::fstream& fstream, std::vector<MicTest>& tests);
     void _generate_random_tests();
@@ -36,6 +38,9 @@ class MicTester {
 
     void run_static_tests();
     void run_random_tests();
+
+    void show_metrics() const;
+    void save_metrics_to_csv(const std::string& filepath) const;
 
     ~MicTester();
 };

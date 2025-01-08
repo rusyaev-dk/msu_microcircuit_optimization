@@ -8,8 +8,8 @@ MicTester::MicTester(Microcircuit& mic, const std::string& static_tests_path,
                      const std::string& random_tests_path)
     : _mic(mic),
       _static_tests_fstream(static_tests_path, std::ios::in),
-      _random_tests_fstream(random_tests_path,
-                            std::ios::out | std::ios::trunc) {
+      _random_tests_fstream(random_tests_path, std::ios::out | std::ios::trunc),
+      _metrics(2) {
     if (!_static_tests_fstream.is_open()) {
         throw std::runtime_error("Error: Failed to open static tests file.");
     }
@@ -32,16 +32,46 @@ void MicTester::run_random_tests() {
     _run_tests(_random_tests);
 }
 
+void MicTester::show_metrics() const {
+    size_t size = std::min(_metrics[0].size(), _metrics[1].size());
+
+    std::cout << "Test\tBF\tBE\n";
+    for (size_t i = 0; i < size; i++) {
+        std::cout << i + 1 << "\t" << _metrics[0][i] << "\t" << _metrics[1][i]
+                  << "\n";
+    }
+}
+
+void MicTester::save_metrics_to_csv(const std::string& filepath) const {
+    std::ofstream file(filepath);
+    if (!file.is_open()) {
+        throw std::runtime_error(
+            "Error: Failed to open file for writing metrics.");
+    }
+
+    size_t size = std::min(_metrics[0].size(), _metrics[1].size());
+    
+    file << "Test,Brute Force,Binary Exp\n";
+    for (size_t i = 0; i < size; ++i) {
+        file << i + 1 << "," << _metrics[0][i] << "," << _metrics[1][i] << "\n";
+    }
+
+    file.close();
+    std::cout << "Metrics successfully saved to " << filepath << "\n";
+}
+
 void MicTester::_run_tests(const std::vector<MicTest>& tests) {
     for (size_t i = 0; i < tests.size(); ++i) {
         const MicTest& test = tests[i];
 
         long long res1 = _mic.brute_force_compute(test.n, test.x);
-        //
+        int cycles = _mic.get_cycles();
+        _metrics[0].push_back(cycles);
         _mic.clear();
 
         long long res2 = _mic.bin_exp_compute(test.n, test.x);
-        //
+        cycles = _mic.get_cycles();
+        _metrics[1].push_back(cycles);
         _mic.clear();
 
         _validate_answer(res1, res2, test.ans, i + 1);
