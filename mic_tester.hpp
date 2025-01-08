@@ -23,7 +23,7 @@ class MicTester {
     std::vector<MicTest> _static_tests;
     std::vector<MicTest> _random_tests;
 
-    std::vector<std::vector<int>> _metrics;
+    std::vector<std::vector<Metrics>> _metrics;
 
     void _load_tests(std::fstream& fstream, std::vector<MicTest>& tests);
     void _generate_random_tests();

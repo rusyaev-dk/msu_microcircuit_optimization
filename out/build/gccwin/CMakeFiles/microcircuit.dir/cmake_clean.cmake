@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/microcircuit.dir/mic_tester.cpp.obj.d"
   "CMakeFiles/microcircuit.dir/microcircuit.cpp.obj"
   "CMakeFiles/microcircuit.dir/microcircuit.cpp.obj.d"
+  "CMakeFiles/microcircuit.dir/timer.cpp.obj"
+  "CMakeFiles/microcircuit.dir/timer.cpp.obj.d"
   "libmicrocircuit.dll.a"
   "microcircuit.exe"
   "microcircuit.exe.manifest"

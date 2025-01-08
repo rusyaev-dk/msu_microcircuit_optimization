@@ -128,7 +128,14 @@ CMakeFiles/microcircuit.dir/main.cpp.obj: C:/Users/ASUS/Desktop/Discrete\ optimi
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/sstream \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/sstream.tcc \
   C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/exceptions.hpp \
-  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/stack.hpp
+  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/stack.hpp \
+  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/timer.hpp \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/chrono \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ratio \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/limits \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ctime \
+  C:/MinGW/include/time.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/parse_numbers.h
 
 CMakeFiles/microcircuit.dir/mic_tester.cpp.obj: C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/mic_tester.cpp \
   C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/mic_tester.hpp \
@@ -258,10 +265,15 @@ CMakeFiles/microcircuit.dir/mic_tester.cpp.obj: C:/Users/ASUS/Desktop/Discrete\ 
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/sstream.tcc \
   C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/exceptions.hpp \
   C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/stack.hpp \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/climits \
-  C:/MinGW/include/limits.h \
+  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/timer.hpp \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/chrono \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ratio \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/limits \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ctime \
-  C:/MinGW/include/time.h
+  C:/MinGW/include/time.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/parse_numbers.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/climits \
+  C:/MinGW/include/limits.h
 
 CMakeFiles/microcircuit.dir/microcircuit.cpp.obj: C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/microcircuit.cpp \
   C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/microcircuit.hpp \
@@ -390,9 +402,38 @@ CMakeFiles/microcircuit.dir/microcircuit.cpp.obj: C:/Users/ASUS/Desktop/Discrete
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/sstream.tcc \
   C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/exceptions.hpp \
   C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/stack.hpp \
+  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/timer.hpp \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/chrono \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ratio \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/limits \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ctime \
+  C:/MinGW/include/time.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/parse_numbers.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/math.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cmath \
   C:/MinGW/include/math.h
+
+CMakeFiles/microcircuit.dir/timer.cpp.obj: C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/timer.cpp \
+  C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/timer.hpp \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/chrono \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ratio \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/type_traits \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++config.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/os_defines.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/cpu_defines.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cstdint \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/stdint.h \
+  C:/MinGW/include/stdint.h \
+  C:/MinGW/include/_mingw.h \
+  C:/MinGW/include/msvcrtver.h \
+  C:/MinGW/include/w32api.h \
+  C:/MinGW/include/sdkddkver.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/stddef.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/limits \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ctime \
+  C:/MinGW/include/time.h \
+  C:/MinGW/include/sys/types.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/parse_numbers.h
 
 
 C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/main.cpp:
@@ -645,12 +686,24 @@ C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/mic_tester.cpp:
 
 C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/exceptions.hpp:
 
-C:/MinGW/include/limits.h:
+C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/timer.hpp:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/chrono:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ratio:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/limits:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ctime:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/parse_numbers.h:
+
+C:/MinGW/include/limits.h:
 
 C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/microcircuit.cpp:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/cmath:
 
 C:/MinGW/include/math.h:
+
+C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/timer.cpp:

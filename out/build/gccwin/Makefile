@@ -200,6 +200,30 @@ microcircuit.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/microcircuit.cpp.s
 .PHONY : microcircuit.cpp.s
 
+timer.obj: timer.cpp.obj
+.PHONY : timer.obj
+
+# target to build an object file
+timer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/timer.cpp.obj
+.PHONY : timer.cpp.obj
+
+timer.i: timer.cpp.i
+.PHONY : timer.i
+
+# target to preprocess a source file
+timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/timer.cpp.i
+.PHONY : timer.cpp.i
+
+timer.s: timer.cpp.s
+.PHONY : timer.s
+
+# target to generate assembly for a file
+timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/timer.cpp.s
+.PHONY : timer.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -218,6 +242,9 @@ help:
 	@echo ... microcircuit.obj
 	@echo ... microcircuit.i
 	@echo ... microcircuit.s
+	@echo ... timer.obj
+	@echo ... timer.i
+	@echo ... timer.s
 .PHONY : help
 
 

@@ -35,10 +35,18 @@ void MicTester::run_random_tests() {
 void MicTester::show_metrics() const {
     size_t size = std::min(_metrics[0].size(), _metrics[1].size());
 
-    std::cout << "Test\tBF\tBE\n";
+    std::cout.precision(3);
+    std::cout << "Test\tBF(Cycles)\tBE(Cycles)\tBF(Ops)\t\tBE(Ops)\t\tBF(ms)"
+                 "\tBE(ms)\n";
     for (size_t i = 0; i < size; i++) {
-        std::cout << i + 1 << "\t" << _metrics[0][i] << "\t" << _metrics[1][i]
-                  << "\n";
+        const Metrics& bf_metrics = _metrics[0][i];
+        const Metrics& be_metrics = _metrics[1][i];
+
+        std::cout << i + 1 << "\t" << bf_metrics.cycles << "\t\t"
+                  << be_metrics.cycles << "\t\t" << bf_metrics.elementary_ops
+                  << "\t\t" << be_metrics.elementary_ops << "\t\t" << std::fixed
+                  << bf_metrics.execution_time << "\t"
+                  << be_metrics.execution_time << "\n";
     }
 }
 
@@ -49,11 +57,18 @@ void MicTester::save_metrics_to_csv(const std::string& filepath) const {
             "Error: Failed to open file for writing metrics.");
     }
 
+    file << "Test,BF(Cycles),BE(Cycles),BF(Ops),BE(Ops),BF(ms),BE(ms)\n";
+
     size_t size = std::min(_metrics[0].size(), _metrics[1].size());
-    
-    file << "Test,Brute Force,Binary Exp\n";
     for (size_t i = 0; i < size; ++i) {
-        file << i + 1 << "," << _metrics[0][i] << "," << _metrics[1][i] << "\n";
+        const Metrics& bf_metrics = _metrics[0][i];
+        const Metrics& be_metrics = _metrics[1][i];
+
+        file << (i + 1) << "," << bf_metrics.cycles << "," << be_metrics.cycles
+             << "," << bf_metrics.elementary_ops << ","
+             << be_metrics.elementary_ops << "," << std::fixed
+             << bf_metrics.execution_time << "," << be_metrics.execution_time
+             << "\n";
     }
 
     file.close();
@@ -65,13 +80,11 @@ void MicTester::_run_tests(const std::vector<MicTest>& tests) {
         const MicTest& test = tests[i];
 
         long long res1 = _mic.brute_force_compute(test.n, test.x);
-        int cycles = _mic.get_cycles();
-        _metrics[0].push_back(cycles);
+        _metrics[0].emplace_back(_mic.get_metrics());
         _mic.clear();
 
         long long res2 = _mic.bin_exp_compute(test.n, test.x);
-        cycles = _mic.get_cycles();
-        _metrics[1].push_back(cycles);
+        _metrics[1].emplace_back(_mic.get_metrics());
         _mic.clear();
 
         _validate_answer(res1, res2, test.ans, i + 1);

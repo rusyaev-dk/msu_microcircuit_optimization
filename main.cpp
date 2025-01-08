@@ -12,6 +12,7 @@ int main() {
 
         // tester.run_static_tests();
         tester.run_random_tests();
+        tester.show_metrics();
         tester.save_metrics_to_csv("metrics.csv");
 
     } catch (const std::ios_base::failure& e) {

@@ -118,6 +118,11 @@ CMakeFiles/microcircuit.dir/mic_tester.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\sstream.tcc \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\exceptions.hpp \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\stack.hpp \
+ C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\timer.hpp \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\chrono \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ratio \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\limits \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ctime c:\mingw\include\time.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\parse_numbers.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\climits \
- c:\mingw\include\limits.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ctime c:\mingw\include\time.h
+ c:\mingw\include\limits.h
