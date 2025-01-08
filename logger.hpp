@@ -27,36 +27,47 @@ class InstructionFormatter {
     }
 };
 
-class InstructionLogger {
-    std::ostream* _output_stream;
+class Logger {
+    std::fstream _stream;
 
    public:
-    InstructionLogger(std::ostream& output_stream = std::cout)
-        : _output_stream(&output_stream) {}
+    Logger(const std::string& filepath) {
+        _stream.open(filepath, std::ios::out);
 
-    void log(const std::string& msg) const {
-        if (!_output_stream) return;
-
-        (*_output_stream) << msg << std::endl;
+        if (!_stream.is_open()) {
+            throw std::runtime_error(
+                "Error: Failed to open logger output file.");
+        }
     }
 
-    void log(const std::string& msg, const long long arg) const {
-        if (!_output_stream) return;
+    void log(const std::string& msg) {
+        if (!_stream.is_open()) return;
 
-        (*_output_stream) << msg << " " << arg << std::endl;
+        _stream << msg;
     }
 
-    void log(MCInstruction instruction, const long long arg) const {
-        if (!_output_stream) return;
+    void log(const std::string& msg, const long long arg) {
+        if (!_stream.is_open()) return;
 
-        (*_output_stream) << InstructionFormatter::to_string(instruction) << " "
-                          << arg << std::endl;
+        _stream << msg << arg << "\n";
     }
 
-    void log(MCInstruction instruction) const {
-        if (!_output_stream) return;
+    void log(const MCInstruction instruction, const long long arg) {
+        if (!_stream.is_open()) return;
 
-        (*_output_stream) << InstructionFormatter::to_string(instruction)
-                          << std::endl;
+        _stream << InstructionFormatter::to_string(instruction) << " " << arg
+                << "\n";
+    }
+
+    void log(const MCInstruction instruction) {
+        if (!_stream.is_open()) return;
+
+        _stream << InstructionFormatter::to_string(instruction) << "\n";
+    }
+
+    ~Logger() {
+        if (_stream.is_open()) {
+            _stream.close();
+        }
     }
 };

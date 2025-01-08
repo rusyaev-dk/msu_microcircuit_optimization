@@ -117,4 +117,7 @@ CMakeFiles/microcircuit.dir/mic_tester.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\sstream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\sstream.tcc \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\exceptions.hpp \
- C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\stack.hpp
+ C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\stack.hpp \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\climits \
+ c:\mingw\include\limits.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ctime c:\mingw\include\time.h

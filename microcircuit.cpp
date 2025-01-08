@@ -2,28 +2,26 @@
 
 #include "math.h"
 
-Microcircuit::Microcircuit(std::ostream& stream)
-    : _logger(InstructionLogger(stream)) {
+Microcircuit::Microcircuit(Logger& logger) : _logger(logger) {
     _stack = Stack<long long>();
-
     _total_cycles = 0;
 }
 
 long long Microcircuit::compute_power(long long x, long long n) {
-    _logger.log("x =", x);
-    _logger.log("n =", n);
+    _logger.log("x = ", x);
+    _logger.log("n = ", n);
 
     _logger.log(MCInstruction::Write, x);
     _write(x);
 
     if (x == 0 || n == 1) {
-        _logger.log("Answer:", x);
-        _logger.log("Total cycles:", 1);
+        _logger.log("Answer: ", x);
+        _logger.log("Total cycles: ", 1);
         _logger.log("\n");
         return x;
     } else if (x == 1 || n == 0) {
-        _logger.log("Answer:", 1LL);
-        _logger.log("Total cycles:", 1);
+        _logger.log("Answer: ", 1LL);
+        _logger.log("Total cycles: ", 1);
         _logger.log("\n");
         return 1ll;
     }
@@ -31,8 +29,8 @@ long long Microcircuit::compute_power(long long x, long long n) {
     _binary_exponentiation(x, n);
     // _brute_force(x, n);
 
-    _logger.log("Answer:", _stack.peek());
-    _logger.log("Total cycles:", _total_cycles);
+    _logger.log("Answer: ", _stack.peek());
+    _logger.log("Total cycles: ", _total_cycles);
     _logger.log("\n");
 
     _total_cycles = 0;
@@ -57,7 +55,7 @@ void Microcircuit::_binary_exponentiation(long long x, long long n) {
     }
 
     for (long long i = bin.size() - 2; i >= 0; i--) {
-        // начинаем с предпоследнего бита
+        // Начинаем с предпоследнего бита
         _logger.log(MCInstruction::Pow, 2);
         _pow_n(2);
         if (bin[i] == 1) {

@@ -14,14 +14,25 @@ struct MicTest {
 };
 
 class MicTester {
-    Microcircuit _mic;
-    std::ifstream* _tests_file_stream;
+    static const int _RAND_TESTS_COUNT = 50;
 
-    std::vector<MicTest> _tests;
-    void _load_tests();
+    Microcircuit _mic;
+    std::fstream* _static_tests_fstream;
+    std::fstream* _random_tests_fstream;
+
+    std::vector<MicTest> _static_tests;
+    std::vector<MicTest> _random_tests;
+
+    void _load_tests(std::fstream* fstream, std::vector<MicTest>& tests);
+
+    void _generate_random_tests();
 
    public:
-    MicTester(Microcircuit mic, std::ifstream& _tests_file_stream);
+    MicTester(Microcircuit& mic, const std::string& static_tests_path,
+              const std::string& random_tests_path);
 
-    void run_tests();
+    // void run_random_tests();
+    void run_static_tests();
+
+    ~MicTester();
 };

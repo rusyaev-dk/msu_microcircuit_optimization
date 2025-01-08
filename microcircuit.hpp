@@ -9,7 +9,7 @@
 
 class Microcircuit {
     Stack<long long> _stack;
-    InstructionLogger _logger;
+    Logger& _logger;
     long long _total_cycles;
 
     void _brute_force(long long x, long long n);            // O(N)
@@ -20,7 +20,7 @@ class Microcircuit {
     void _pow_n(long long n);
 
    public:
-    Microcircuit(std::ostream& stream = std::cout);
+    Microcircuit(Logger& logger);
     long long compute_power(long long x, long long n);
 
     void clear();
