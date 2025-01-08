@@ -7,47 +7,32 @@ Microcircuit::Microcircuit(Logger& logger) : _logger(logger) {
     _total_cycles = 0;
 }
 
-long long Microcircuit::compute_power(long long x, long long n) {
-    _logger.log("x = ", x);
-    _logger.log("n = ", n);
-
-    _logger.log(MCInstruction::Write, x);
-    _write(x);
-
-    if (x == 0 || n == 1) {
-        _logger.log("Answer: ", x);
-        _logger.log("Total cycles: ", 1);
-        _logger.log("\n");
-        return x;
-    } else if (x == 1 || n == 0) {
-        _logger.log("Answer: ", 1LL);
-        _logger.log("Total cycles: ", 1);
-        _logger.log("\n");
-        return 1ll;
+long long Microcircuit::brute_force_compute(long long x, long long n) {
+    long long res = _pre_compute(x, n);
+    if (res != -1) {
+        _print_answer(res, 1);
+        return res;
     }
 
-    _binary_exponentiation(x, n);
-    // _brute_force(x, n);
-
-    _logger.log("Answer: ", _stack.peek());
-    _logger.log("Total cycles: ", _total_cycles);
-    _logger.log("\n");
-
-    _total_cycles = 0;
-
-    return _stack.peek();
-}
-
-void Microcircuit::_brute_force(long long x, long long n) {
     _logger.log(MCInstruction::Write, _stack.peek());
     _write(_stack.peek());
     for (long long i = 1; i < n; i++) {
         _logger.log(MCInstruction::Mul);
         _mul();
     }
+
+    _print_answer(_stack.peek(), _total_cycles);
+    _total_cycles = 0;
+    return _stack.peek();
 }
 
-void Microcircuit::_binary_exponentiation(long long x, long long n) {
+long long Microcircuit::bin_exp_compute(long long x, long long n) {
+    long long res = _pre_compute(x, n);
+    if (res != -1) {
+        _print_answer(res, 1);
+        return res;
+    }
+
     std::vector<long long> bin;
     while (n > 0) {
         bin.push_back(n % 2);
@@ -66,6 +51,32 @@ void Microcircuit::_binary_exponentiation(long long x, long long n) {
             _mul();
         }
     }
+
+    _print_answer(_stack.peek(), _total_cycles);
+    _total_cycles = 0;
+    return _stack.peek();
+}
+
+long long Microcircuit::_pre_compute(long long x, long long n) {
+    _stack.clear();
+    _logger.log("x = ", x);
+    _logger.log("n = ", n);
+
+    _logger.log(MCInstruction::Write, x);
+    _write(x);
+
+    if (x == 0 || n == 1) {
+        _logger.log("Answer: ", x);
+        _logger.log("Total cycles: ", 1);
+        _logger.log("\n");
+        return x;
+    } else if (x == 1 || n == 0) {
+        _logger.log("Answer: ", 1LL);
+        _logger.log("Total cycles: ", 1);
+        _logger.log("\n");
+        return 1ll;
+    }
+    return -1;
 }
 
 void Microcircuit::_write(long long x) {
@@ -96,6 +107,12 @@ void Microcircuit::_pow_n(long long n) {
     _stack.rewrite_top(result);
 
     _total_cycles += n - 1;
+}
+
+void Microcircuit::_print_answer(long long ans, int cycles) {
+    _logger.log("Answer: ", ans);
+    _logger.log("Total cycles: ", cycles);
+    _logger.log("\n");
 }
 
 void Microcircuit::clear() {

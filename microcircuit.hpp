@@ -12,16 +12,19 @@ class Microcircuit {
     Logger& _logger;
     long long _total_cycles;
 
-    void _brute_force(long long x, long long n);            // O(N)
-    void _binary_exponentiation(long long x, long long n);  // O(logN)
+    long long _pre_compute(long long x, long long n);
 
     void _write(long long x);
     void _mul();
     void _pow_n(long long n);
 
+    void _print_answer(long long ans, int cycles);
+
    public:
     Microcircuit(Logger& logger);
-    long long compute_power(long long x, long long n);
+
+    long long brute_force_compute(long long x, long long n);  // O(N)
+    long long bin_exp_compute(long long x, long long n);      // O(logN)
 
     void clear();
 };

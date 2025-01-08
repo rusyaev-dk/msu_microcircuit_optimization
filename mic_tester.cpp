@@ -36,7 +36,7 @@ void MicTester::_run_tests(const std::vector<MicTest>& tests) {
     for (size_t i = 0; i < tests.size(); ++i) {
         const MicTest& test = tests[i];
 
-        long long res = _mic.compute_power(test.n, test.x);
+        long long res = _mic.bin_exp_compute(test.n, test.x);
         _mic.clear();
 
         if (res != test.ans) {
