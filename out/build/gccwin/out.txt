@@ -1,151 +1,345 @@
-x = 2
-n = 5
-Write 2
-Pow 2
-Pow 2
-Write 2
-Mul
-Answer: 32
-Total cycles: 5
-
-x = 2
-n = 6
-Write 2
-Pow 2
-Write 2
-Mul
-Pow 2
-Answer: 64
-Total cycles: 5
-
-x = 2
-n = 26
-Write 2
-Pow 2
-Write 2
-Mul
-Pow 2
-Pow 2
-Write 2
-Mul
-Pow 2
-Answer: 67108864
-Total cycles: 9
-
-x = 5
-n = 7
-Write 5
-Pow 2
-Write 5
-Mul
-Pow 2
-Write 5
-Mul
-Answer: 78125
-Total cycles: 7
-
-x = 25
-n = 2
-Write 25
-Pow 2
-Answer: 625
-Total cycles: 2
-
 x = 1
-n = 567
+n = 62
 Write 1
 Answer: 1
 Total cycles: 1
 
-x = 0
-n = 567
-Write 0
-Answer: 0
-Total cycles: 1
-
-x = 345437637
-n = 0
-Write 345437637
-Answer: 1
-Total cycles: 1
-
-x = 10
-n = 0
-Write 10
-Answer: 1
-Total cycles: 1
-
-x = 10
-n = 1
-Write 10
-Answer: 10
-Total cycles: 1
-
-x = 0
-n = 0
-Write 0
-Answer: 0
-Total cycles: 1
-
-x = 2
-n = 31
-Write 2
+x = 12
+n = 2
+Write 12
 Pow 2
-Write 2
+Answer: 144
+Total cycles: 2
+
+x = 27
+n = 12
+Write 27
+Pow 2
+Write 27
 Mul
 Pow 2
-Write 2
-Mul
 Pow 2
-Write 2
-Mul
-Pow 2
-Write 2
-Mul
-Answer: 2147483648
-Total cycles: 13
-
-x = 2
-n = 10
-Write 2
-Pow 2
-Pow 2
-Write 2
-Mul
-Pow 2
-Answer: 1024
+Answer: 150094635296999121
 Total cycles: 6
 
-x = 3
+x = 81
+n = 0
+Write 81
+Answer: 1
+Total cycles: 1
+
+x = 64
 n = 3
-Write 3
+Write 64
 Pow 2
-Write 3
+Write 64
 Mul
-Answer: 27
+Answer: 262144
 Total cycles: 4
 
-x = 9
-n = 9
-Write 9
+x = 57
+n = 5
+Write 57
 Pow 2
 Pow 2
-Pow 2
-Write 9
+Write 57
 Mul
-Answer: 387420489
+Answer: 601692057
+Total cycles: 5
+
+x = 0
+n = 33
+Write 0
+Answer: 0
+Total cycles: 1
+
+x = 100
+n = 4
+Write 100
+Pow 2
+Pow 2
+Answer: 100000000
+Total cycles: 3
+
+x = 96
+n = 7
+Write 96
+Pow 2
+Write 96
+Mul
+Pow 2
+Write 96
+Mul
+Answer: 75144747810816
+Total cycles: 7
+
+x = 0
+n = 12
+Write 0
+Answer: 0
+Total cycles: 1
+
+x = 0
+n = 43
+Write 0
+Answer: 0
+Total cycles: 1
+
+x = 4
+n = 23
+Write 4
+Pow 2
+Pow 2
+Write 4
+Mul
+Pow 2
+Write 4
+Mul
+Pow 2
+Write 4
+Mul
+Answer: 70368744177664
+Total cycles: 11
+
+x = 95
+n = 7
+Write 95
+Pow 2
+Write 95
+Mul
+Pow 2
+Write 95
+Mul
+Answer: 69833729609375
+Total cycles: 7
+
+x = 5
+n = 23
+Write 5
+Pow 2
+Pow 2
+Write 5
+Mul
+Pow 2
+Write 5
+Mul
+Pow 2
+Write 5
+Mul
+Answer: 11920928955078125
+Total cycles: 11
+
+x = 29
+n = 4
+Write 29
+Pow 2
+Pow 2
+Answer: 707281
+Total cycles: 3
+
+x = 4
+n = 7
+Write 4
+Pow 2
+Write 4
+Mul
+Pow 2
+Write 4
+Mul
+Answer: 16384
+Total cycles: 7
+
+x = 79
+n = 8
+Write 79
+Pow 2
+Pow 2
+Pow 2
+Answer: 1517108809906561
+Total cycles: 4
+
+x = 51
+n = 10
+Write 51
+Pow 2
+Pow 2
+Write 51
+Mul
+Pow 2
+Answer: 119042423827613001
 Total cycles: 6
 
+x = 10
+n = 3
+Write 10
+Pow 2
+Write 10
+Mul
+Answer: 1000
+Total cycles: 4
+
+x = 76
+n = 4
+Write 76
+Pow 2
+Pow 2
+Answer: 33362176
+Total cycles: 3
+
 x = 8
-n = 12
+n = 4
 Write 8
+Pow 2
+Pow 2
+Answer: 4096
+Total cycles: 3
+
+x = 12
+n = 5
+Write 12
+Pow 2
+Pow 2
+Write 12
+Mul
+Answer: 248832
+Total cycles: 5
+
+x = 60
+n = 5
+Write 60
+Pow 2
+Pow 2
+Write 60
+Mul
+Answer: 777600000
+Total cycles: 5
+
+x = 62
+n = 7
+Write 62
+Pow 2
+Write 62
+Mul
+Pow 2
+Write 62
+Mul
+Answer: 3521614606208
+Total cycles: 7
+
+x = 60
+n = 2
+Write 60
+Pow 2
+Answer: 3600
+Total cycles: 2
+
+x = 75
+n = 0
+Write 75
+Answer: 1
+Total cycles: 1
+
+x = 82
+n = 5
+Write 82
+Pow 2
+Pow 2
+Write 82
+Mul
+Answer: 3707398432
+Total cycles: 5
+
+x = 3
+n = 6
+Write 3
+Pow 2
+Write 3
+Mul
+Pow 2
+Answer: 729
+Total cycles: 5
+
+x = 47
+n = 9
+Write 47
+Pow 2
+Pow 2
+Pow 2
+Write 47
+Mul
+Answer: 1119130473102767
+Total cycles: 6
+
+x = 2
+n = 55
+Write 2
+Pow 2
+Write 2
+Mul
+Pow 2
+Pow 2
+Write 2
+Mul
+Pow 2
+Write 2
+Mul
+Pow 2
+Write 2
+Mul
+Answer: 36028797018963968
+Total cycles: 14
+
+x = 4
+n = 31
+Write 4
+Pow 2
+Write 4
+Mul
+Pow 2
+Write 4
+Mul
+Pow 2
+Write 4
+Mul
+Pow 2
+Write 4
+Mul
+Answer: 4611686018427387904
+Total cycles: 13
+
+x = 39
+n = 4
+Write 39
+Pow 2
+Pow 2
+Answer: 2313441
+Total cycles: 3
+
+x = 8
+n = 11
+Write 8
+Pow 2
 Pow 2
 Write 8
 Mul
 Pow 2
+Write 8
+Mul
+Answer: 8589934592
+Total cycles: 8
+
+x = 3
+n = 13
+Write 3
 Pow 2
-Answer: 68719476736
-Total cycles: 6
+Write 3
+Mul
+Pow 2
+Pow 2
+Write 3
+Mul
+Answer: 1594323
+Total cycles: 8
 
 x = 7
 n = 4
@@ -155,239 +349,41 @@ Pow 2
 Answer: 2401
 Total cycles: 3
 
-x = 15
+x = 49
 n = 3
-Write 15
+Write 49
 Pow 2
-Write 15
+Write 49
 Mul
-Answer: 3375
+Answer: 117649
 Total cycles: 4
 
-x = 20
-n = 5
-Write 20
+x = 53
+n = 2
+Write 53
 Pow 2
-Pow 2
-Write 20
-Mul
-Answer: 3200000
-Total cycles: 5
+Answer: 2809
+Total cycles: 2
 
-x = 11
-n = 11
-Write 11
+x = 83
+n = 3
+Write 83
 Pow 2
-Pow 2
-Write 11
+Write 83
 Mul
-Pow 2
-Write 11
-Mul
-Answer: 285311670611
-Total cycles: 8
+Answer: 571787
+Total cycles: 4
 
-x = 1
-n = 999999
-Write 1
-Answer: 1
+x = 0
+n = 55
+Write 0
+Answer: 0
 Total cycles: 1
 
-x = 2
-n = 50
-Write 2
+x = 30
+n = 2
+Write 30
 Pow 2
-Write 2
-Mul
-Pow 2
-Pow 2
-Pow 2
-Write 2
-Mul
-Pow 2
-Answer: 1125899906842624
-Total cycles: 10
+Answer: 900
+Total cycles: 2
 
-x = 3
-n = 20
-Write 3
-Pow 2
-Pow 2
-Write 3
-Mul
-Pow 2
-Pow 2
-Answer: 3486784401
-Total cycles: 7
-
-x = 4
-n = 15
-Write 4
-Pow 2
-Write 4
-Mul
-Pow 2
-Write 4
-Mul
-Pow 2
-Write 4
-Mul
-Answer: 1073741824
-Total cycles: 10
-
-x = 5
-n = 13
-Write 5
-Pow 2
-Write 5
-Mul
-Pow 2
-Pow 2
-Write 5
-Mul
-Answer: 1220703125
-Total cycles: 8
-
-x = 6
-n = 15
-Write 6
-Pow 2
-Write 6
-Mul
-Pow 2
-Write 6
-Mul
-Pow 2
-Write 6
-Mul
-Answer: 470184984576
-Total cycles: 10
-
-x = 7
-n = 10
-Write 7
-Pow 2
-Pow 2
-Write 7
-Mul
-Pow 2
-Answer: 282475249
-Total cycles: 6
-
-x = 8
-n = 5
-Write 8
-Pow 2
-Pow 2
-Write 8
-Mul
-Answer: 32768
-Total cycles: 5
-
-x = 9
-n = 8
-Write 9
-Pow 2
-Pow 2
-Pow 2
-Answer: 43046721
-Total cycles: 4
-
-x = 10
-n = 10
-Write 10
-Pow 2
-Pow 2
-Write 10
-Mul
-Pow 2
-Answer: 10000000000
-Total cycles: 6
-
-x = 11
-n = 9
-Write 11
-Pow 2
-Pow 2
-Pow 2
-Write 11
-Mul
-Answer: 2357947691
-Total cycles: 6
-
-x = 2
-n = 32
-Write 2
-Pow 2
-Pow 2
-Pow 2
-Pow 2
-Pow 2
-Answer: 4294967296
-Total cycles: 6
-
-x = 3
-n = 19
-Write 3
-Pow 2
-Pow 2
-Pow 2
-Write 3
-Mul
-Pow 2
-Write 3
-Mul
-Answer: 1162261467
-Total cycles: 9
-
-x = 12
-n = 8
-Write 12
-Pow 2
-Pow 2
-Pow 2
-Answer: 429981696
-Total cycles: 4
-
-x = 15
-n = 8
-Write 15
-Pow 2
-Pow 2
-Pow 2
-Answer: 2562890625
-Total cycles: 4
-
-x = 13
-n = 7
-Write 13
-Pow 2
-Write 13
-Mul
-Pow 2
-Write 13
-Mul
-Answer: 62748517
-Total cycles: 7
-
-x = 19
-n = 7
-Write 19
-Pow 2
-Write 19
-Mul
-Pow 2
-Write 19
-Mul
-Answer: 893871739
-Total cycles: 7
-
-x = 17
-n = 6
-Write 17
-Pow 2
-Write 17
-Mul
-Pow 2
-Answer: 24137569
-Total cycles: 

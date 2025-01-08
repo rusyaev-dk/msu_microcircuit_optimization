@@ -12,7 +12,8 @@ int main() {
         Microcircuit mic(logger);
 
         MicTester tester(mic, "static_tests.txt", "random_tests.txt");
-        tester.run_static_tests();
+        // tester.run_static_tests();
+        tester.run_random_tests();
 
     } catch (const std::ios_base::failure& e) {
         std::cout << "File I/O error: " << e.what() << std::endl;
