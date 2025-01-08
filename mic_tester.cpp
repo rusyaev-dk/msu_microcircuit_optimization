@@ -4,6 +4,14 @@
 #include <cstdlib>
 #include <ctime>
 
+#include <locale>
+
+struct CustomCommaFacet : public std::numpunct<char> {
+protected:
+    char do_decimal_point() const override { return ','; }
+};
+
+
 MicTester::MicTester(Microcircuit& mic, const std::string& static_tests_path,
                      const std::string& random_tests_path)
     : _mic(mic),
@@ -57,17 +65,18 @@ void MicTester::save_metrics_to_csv(const std::string& filepath) const {
             "Error: Failed to open file for writing metrics.");
     }
 
-    file << "Test,BF(Cycles),BE(Cycles),BF(Ops),BE(Ops),BF(ms),BE(ms)\n";
+    file.imbue(std::locale(file.getloc(), new CustomCommaFacet));
+    file << "Test;BF(Cycles);BE(Cycles);BF(Ops);BE(Ops);BF(ms);BE(ms)\n";
 
     size_t size = std::min(_metrics[0].size(), _metrics[1].size());
     for (size_t i = 0; i < size; ++i) {
         const Metrics& bf_metrics = _metrics[0][i];
         const Metrics& be_metrics = _metrics[1][i];
 
-        file << (i + 1) << "," << bf_metrics.cycles << "," << be_metrics.cycles
-             << "," << bf_metrics.elementary_ops << ","
-             << be_metrics.elementary_ops << "," << std::fixed
-             << bf_metrics.execution_time << "," << be_metrics.execution_time
+        file << (i + 1) << ";" << bf_metrics.cycles << ";" << be_metrics.cycles
+             << ";" << bf_metrics.elementary_ops << ";"
+             << be_metrics.elementary_ops << ";"
+             << bf_metrics.execution_time << ";" << be_metrics.execution_time
              << "\n";
     }
 

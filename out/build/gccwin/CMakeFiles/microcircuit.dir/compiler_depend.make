@@ -273,7 +273,22 @@ CMakeFiles/microcircuit.dir/mic_tester.cpp.obj: C:/Users/ASUS/Desktop/Discrete\ 
   C:/MinGW/include/time.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/parse_numbers.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/climits \
-  C:/MinGW/include/limits.h
+  C:/MinGW/include/limits.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/locale \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_facets_nonio.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/time_members.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/messages_members.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_facets_nonio.tcc \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_conv.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stringfwd.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/allocator.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/codecvt.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/unique_ptr.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/utility \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_relops.h \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/tuple \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/array \
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/uses_allocator.h
 
 CMakeFiles/microcircuit.dir/microcircuit.cpp.obj: C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/microcircuit.cpp \
   C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/microcircuit.hpp \
@@ -642,6 +657,8 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/stdexcept:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/streambuf:
 
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/locale:
+
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/streambuf.tcc:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_ios.h:
@@ -699,6 +716,28 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/ctime:
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/parse_numbers.h:
 
 C:/MinGW/include/limits.h:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_facets_nonio.h:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/time_members.h:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/messages_members.h:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_facets_nonio.tcc:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_conv.h:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/unique_ptr.h:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/utility:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_relops.h:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/tuple:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/array:
+
+C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/uses_allocator.h:
 
 C:/Users/ASUS/Desktop/Discrete\ optimization/microcircuit/microcircuit.cpp:
 

@@ -13,7 +13,7 @@ struct Metrics {
     int elementary_ops;
     double execution_time;
 
-    Metrics() : cycles(0), elementary_ops(0), execution_time(0) {}
+    Metrics() : cycles(0), elementary_ops(0), execution_time(0.0) {}
 
     Metrics(int c, int ops, double time)
         : cycles(c), elementary_ops(ops), execution_time(time) {}

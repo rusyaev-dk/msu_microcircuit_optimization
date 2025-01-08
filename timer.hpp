@@ -8,6 +8,8 @@ class Timer {
     TimePoint _start;
     double _elapsed_time;
 
+    void _wait(int milliseconds) const;
+
    public:
     Timer() : _elapsed_time(0.0) {}
 

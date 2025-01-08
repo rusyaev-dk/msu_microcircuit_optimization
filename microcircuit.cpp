@@ -40,7 +40,7 @@ long long Microcircuit::bin_exp_compute(long long x, long long n) {
     while (n > 0) {
         bin.push_back(n % 2);
         n /= 2;
-        _metrics.elementary_ops += 1;
+        _metrics.elementary_ops += 2;
     }
 
     for (long long i = bin.size() - 2; i >= 0; i--) {
