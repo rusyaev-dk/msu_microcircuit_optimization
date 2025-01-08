@@ -27,4 +27,6 @@ class Microcircuit {
     long long bin_exp_compute(long long x, long long n);      // O(logN)
 
     void clear();
+
+    ~Microcircuit();
 };

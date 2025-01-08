@@ -22,7 +22,6 @@ long long Microcircuit::brute_force_compute(long long x, long long n) {
     }
 
     _print_answer(_stack.peek(), _total_cycles);
-    _total_cycles = 0;
     return _stack.peek();
 }
 
@@ -53,24 +52,27 @@ long long Microcircuit::bin_exp_compute(long long x, long long n) {
     }
 
     _print_answer(_stack.peek(), _total_cycles);
-    _total_cycles = 0;
     return _stack.peek();
 }
 
 long long Microcircuit::_pre_compute(long long x, long long n) {
+    _total_cycles = 0;
     _stack.clear();
+
     _logger.log("x = ", x);
     _logger.log("n = ", n);
-
     _logger.log(MCInstruction::Write, x);
+
     _write(x);
 
     if (x == 0 || n == 1) {
+        _total_cycles = 1;
         _logger.log("Answer: ", x);
         _logger.log("Total cycles: ", 1);
         _logger.log("\n");
         return x;
     } else if (x == 1 || n == 0) {
+        _total_cycles = 1;
         _logger.log("Answer: ", 1LL);
         _logger.log("Total cycles: ", 1);
         _logger.log("\n");
@@ -118,4 +120,9 @@ void Microcircuit::_print_answer(long long ans, int cycles) {
 void Microcircuit::clear() {
     _stack.clear();
     _total_cycles = 0;
+}
+
+Microcircuit::~Microcircuit() {
+    delete[] &_stack;
+    delete[] &_logger;
 }

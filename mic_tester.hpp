@@ -27,11 +27,13 @@ class MicTester {
     void _generate_random_tests();
 
     void _run_tests(const std::vector<MicTest>& tests);
+    void _validate_answer(const long long& res1, const long long& res2,
+                          const long long ans, const int test_num) const;
 
    public:
     MicTester(Microcircuit& mic, const std::string& static_tests_path,
               const std::string& random_tests_path);
-    
+
     void run_static_tests();
     void run_random_tests();
 

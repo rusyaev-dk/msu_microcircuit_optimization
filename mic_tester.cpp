@@ -36,16 +36,36 @@ void MicTester::_run_tests(const std::vector<MicTest>& tests) {
     for (size_t i = 0; i < tests.size(); ++i) {
         const MicTest& test = tests[i];
 
-        long long res = _mic.bin_exp_compute(test.n, test.x);
+        long long res1 = _mic.brute_force_compute(test.n, test.x);
+        //
         _mic.clear();
 
-        if (res != test.ans) {
-            std::cout << "- Test " << i + 1
-                      << " failed. Correct ans: " << test.ans
-                      << " Output ans: " << res << "\n";
-        } else {
-            std::cout << "- Test " << i + 1 << " passed\n";
-        }
+        long long res2 = _mic.bin_exp_compute(test.n, test.x);
+        //
+        _mic.clear();
+
+        _validate_answer(res1, res2, test.ans, i + 1);
+    }
+}
+
+void MicTester::_validate_answer(const long long& res1, const long long& res2,
+                                 const long long ans,
+                                 const int test_num) const {
+    std::string approach;
+    if (res1 != ans && res2 != ans) {
+        approach = "all";
+    } else if (res1 != ans) {
+        approach = "brute force";
+    } else if (res2 != ans) {
+        approach = "binary exp";
+    }
+
+    if (approach.empty()) {
+        std::cout << "- Test " << test_num << " passed\n";
+    } else {
+        std::cout << "- Test " << test_num << " failed | Correct ans: " << ans
+                  << " | Output ans: " << res1 << " | Approach: " << approach
+                  << "\n";
     }
 }
 
@@ -57,8 +77,8 @@ void MicTester::_generate_random_tests() {
     _random_tests.clear();
 
     for (int i = 0; i < _RAND_TESTS_COUNT; i++) {
-        long long x = std::rand() % 101; // Диапазон [0, 100]
-        long long n = std::rand() % 64;  // Диапазон [0, 63]
+        long long x = std::rand() % 101;  // Диапазон [0, 100]
+        long long n = std::rand() % 64;   // Диапазон [0, 63]
 
         if (x == 0) {
             _random_tests_fstream << x << " " << n << " " << 0 << "\n";
@@ -95,7 +115,6 @@ void MicTester::_generate_random_tests() {
     std::cout << "Random tests successfully generated and loaded.\n";
 }
 
-
 void MicTester::_load_tests(std::fstream& fstream,
                             std::vector<MicTest>& tests) {
     tests.clear();
@@ -115,7 +134,6 @@ void MicTester::_load_tests(std::fstream& fstream,
     }
 }
 
-
 MicTester::~MicTester() {
     if (_static_tests_fstream.is_open()) {
         _static_tests_fstream.close();
@@ -124,4 +142,6 @@ MicTester::~MicTester() {
     if (_random_tests_fstream.is_open()) {
         _random_tests_fstream.close();
     }
+
+    delete[] &_mic;
 }
