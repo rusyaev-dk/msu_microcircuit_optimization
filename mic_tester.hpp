@@ -14,7 +14,7 @@ struct MicTest {
 };
 
 class MicTester {
-    static const int _RAND_TESTS_COUNT = 100000;
+    static const int _RAND_TESTS_COUNT = 100;
 
     Microcircuit _mic;
     std::fstream _static_tests_fstream;

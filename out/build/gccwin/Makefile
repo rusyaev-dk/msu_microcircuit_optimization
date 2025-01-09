@@ -128,6 +128,30 @@ microcircuit/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/build
 .PHONY : microcircuit/fast
 
+logger.obj: logger.cpp.obj
+.PHONY : logger.obj
+
+# target to build an object file
+logger.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/logger.cpp.obj
+.PHONY : logger.cpp.obj
+
+logger.i: logger.cpp.i
+.PHONY : logger.i
+
+# target to preprocess a source file
+logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/logger.cpp.i
+.PHONY : logger.cpp.i
+
+logger.s: logger.cpp.s
+.PHONY : logger.s
+
+# target to generate assembly for a file
+logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\microcircuit.dir\build.make CMakeFiles/microcircuit.dir/logger.cpp.s
+.PHONY : logger.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -233,6 +257,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... microcircuit
+	@echo ... logger.obj
+	@echo ... logger.i
+	@echo ... logger.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

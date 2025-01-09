@@ -8,6 +8,28 @@
 #include "stack.hpp"
 #include "timer.hpp"
 
+enum MCInstruction {
+    Write,
+    Mul,
+    Pow,
+};
+
+class InstructionFormatter {
+   public:
+    static const std::string to_string(MCInstruction instruction) {
+        switch (instruction) {
+            case Write:
+                return "Write";
+            case Mul:
+                return "Mul";
+            case Pow:
+                return "Pow";
+            default:
+                throw MicrocircuitException("Unknown MCInstruction");
+        }
+    }
+};
+
 struct Metrics {
     int cycles;
     int elementary_ops;

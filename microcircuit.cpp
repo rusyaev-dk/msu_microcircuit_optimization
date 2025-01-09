@@ -111,7 +111,7 @@ void Microcircuit::_pow_n(long long n) {
 
     long long top = _stack.peek();
     long long result = 1;
-    for (long long i = 0; i < n; ++i) {
+    for (long long i = 0; i < n; i++) {
         result *= top;
         _metrics.elementary_ops++;
     }

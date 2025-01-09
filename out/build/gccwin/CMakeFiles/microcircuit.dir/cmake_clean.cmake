@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/microcircuit.dir/logger.cpp.obj"
+  "CMakeFiles/microcircuit.dir/logger.cpp.obj.d"
   "CMakeFiles/microcircuit.dir/main.cpp.obj"
   "CMakeFiles/microcircuit.dir/main.cpp.obj.d"
   "CMakeFiles/microcircuit.dir/mic_tester.cpp.obj"
