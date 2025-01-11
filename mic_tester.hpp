@@ -3,6 +3,18 @@
 #include <fstream>
 
 #include "microcircuit.hpp"
+#include "timer.hpp"
+
+struct Metrics {
+    int cycles;
+    int elementary_ops;
+    double execution_time;
+
+    Metrics() : cycles(0), elementary_ops(0), execution_time(0.0) {}
+
+    Metrics(int c, int ops, double time)
+        : cycles(c), elementary_ops(ops), execution_time(time) {}
+};
 
 struct MicTest {
     long long n;
@@ -14,9 +26,12 @@ struct MicTest {
 };
 
 class MicTester {
-    static const int _RAND_TESTS_COUNT = 100;
+    static const int _RAND_TESTS_COUNT = 100000;
+    static const int _SINGLE_TEST_REPEATS = 100;
 
     Microcircuit _mic;
+    Timer _timer;
+
     std::fstream _static_tests_fstream;
     std::fstream _random_tests_fstream;
 
@@ -29,6 +44,7 @@ class MicTester {
     void _generate_random_tests();
 
     void _run_tests(const std::vector<MicTest>& tests);
+    Metrics _collect_metrics(const Microcircuit& mic, const double exec_time);
     void _validate_answer(const long long& res1, const long long& res2,
                           const long long ans, const int test_num) const;
 

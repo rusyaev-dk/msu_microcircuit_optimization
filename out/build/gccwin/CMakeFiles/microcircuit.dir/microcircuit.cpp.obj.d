@@ -113,15 +113,8 @@ CMakeFiles/microcircuit.dir/microcircuit.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\basic_file.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\c++io.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\fstream.tcc \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\sstream \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\sstream.tcc \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\exceptions.hpp \
+ C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\mc_instruction.hpp \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\stack.hpp \
- C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\timer.hpp \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\chrono \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ratio \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\limits \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ctime c:\mingw\include\time.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\parse_numbers.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\math.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cmath c:\mingw\include\math.h

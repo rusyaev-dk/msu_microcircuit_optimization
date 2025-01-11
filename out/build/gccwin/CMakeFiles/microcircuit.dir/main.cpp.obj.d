@@ -114,9 +114,8 @@ CMakeFiles/microcircuit.dir/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_bvector.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\vector.tcc \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\logger.hpp \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\sstream \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\sstream.tcc \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\exceptions.hpp \
+ C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\mc_instruction.hpp \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\stack.hpp \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\timer.hpp \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\chrono \

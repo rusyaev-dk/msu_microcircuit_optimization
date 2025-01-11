@@ -1,5 +1,9 @@
+#pragma once
+
+#include <fstream>
+
 #include "exceptions.hpp"
-#include "microcircuit.hpp"
+#include "mc_instruction.hpp"
 
 class Logger {
     std::fstream _stream;

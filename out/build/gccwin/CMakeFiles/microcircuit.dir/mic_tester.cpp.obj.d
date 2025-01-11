@@ -114,9 +114,8 @@ CMakeFiles/microcircuit.dir/mic_tester.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_bvector.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\vector.tcc \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\logger.hpp \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\sstream \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\sstream.tcc \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\exceptions.hpp \
+ C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\mc_instruction.hpp \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\stack.hpp \
  C:\Users\ASUS\Desktop\Discrete\ optimization\microcircuit\timer.hpp \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\chrono \
@@ -124,8 +123,17 @@ CMakeFiles/microcircuit.dir/mic_tester.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\limits \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ctime c:\mingw\include\time.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\parse_numbers.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\algorithm \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\utility \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_relops.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_algo.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\algorithmfwd.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_heap.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_tempbuf.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\uniform_int_dist.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\climits \
  c:\mingw\include\limits.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\iomanip \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\locale \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_facets_nonio.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\time_members.h \
@@ -136,8 +144,9 @@ CMakeFiles/microcircuit.dir/mic_tester.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\allocator.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\codecvt.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\unique_ptr.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\utility \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_relops.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\tuple \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\array \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\uses_allocator.h
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\uses_allocator.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\quoted_string.h \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\sstream \
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\sstream.tcc
